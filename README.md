@@ -12,7 +12,7 @@ You need nircmd.exe in your windows directory:
 
 ### If you want to change the hotkey or earplug volume: 
 
-  - You will need autohotkey installed to run the script:  
+  - You will need autohotkey installed to run/compile the script:  
     - [ahk-install.exe](https://www.autohotkey.com/download/ahk-install.exe)
   
   - Copy the script from the source folder or clone/download the repo, instructions are in the script.
