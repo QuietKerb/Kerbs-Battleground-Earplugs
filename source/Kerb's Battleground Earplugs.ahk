@@ -40,7 +40,7 @@ WinGet, pid, PID, PLAYERUNKNOWN'S BATTLEGROUNDS
 WinGetPos, X, Y, Width, Height, PLAYERUNKNOWN'S BATTLEGROUNDS
 
 if (normalVolume) {
-  ToolTip, EARPLUGS IN, ((Width / 2) - 35), (Height - (Height / 5))
+  ToolTip, EARPLUGS IN, ((Width / 2) - 48), (Height - (Height / 5))
   run, nircmd.exe setappvolume /%pid% %EARPLUGVOL%
   normalVolume := false
 } else {
