@@ -2,7 +2,7 @@
 Volume toggle hotkey for PUBG
 
 Download the .exe anywhere you want:
-  - [Kerb's Battleground Earplugs.exe](https://github.com/QuietKerb/Kerbs-Battleground-Earplugs/raw/master/Kerb's%20Battleground%20Earplugs.exe)
+  - [Kerb's Battleground Earplugs.exe](https://github.com/QuietKerb/Kerbs-Battleground-Earplugs/raw/master/bin/Kerb's%20Battleground%20Earplugs.exe)
   
 You need nircmd.exe in your windows directory:  
   - [nircmd-x64.zip](http://www.nirsoft.net/utils/nircmd-x64.zip)  
