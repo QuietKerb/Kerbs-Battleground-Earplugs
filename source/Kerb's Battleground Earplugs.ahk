@@ -24,25 +24,23 @@ HOTKEY = INSERT
 EARPLUGVOL := 0.2
 --------------------------------------------------------------------------------
 
-; Init some stuff --------------------------------------------------------------
+; Init some stuff
 #NoEnv
 SendMode Input
 SetWorkingDir %A_ScriptDir%
 normalVolume := true
---------------------------------------------------------------------------------
 
-; Set hotkey -------------------------------------------------------------------
+; Set hotkey
 Hotkey, %HOTKEY%, toggleVolume
 Return
---------------------------------------------------------------------------------
 
-; Toggle volume ----------------------------------------------------------------
+; Toggle volume
 toggleVolume:
 WinGet, pid, PID, PLAYERUNKNOWN'S BATTLEGROUNDS
 WinGetPos, X, Y, Width, Height, PLAYERUNKNOWN'S BATTLEGROUNDS
 
 if (normalVolume) {
-  ToolTip, EARPLUGS IN, ((Width / 2) - 30), (Height - (Height / 5))
+  ToolTip, EARPLUGS IN, ((Width / 2) - 35), (Height - (Height / 5))
   run, nircmd.exe setappvolume /%pid% %EARPLUGVOL%
   normalVolume := false
 } else {
@@ -52,4 +50,3 @@ if (normalVolume) {
 }
 
 Return
---------------------------------------------------------------------------------
