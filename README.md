@@ -10,7 +10,7 @@ You need nircmd.exe in your windows directory:
   
 A green H icon will show in the system tray while it's running, right click and exit to close.
   
-## Press the hotkey (Insert by default) to toggle earplugs in/out
+## Press Insert to toggle earplugs in/out
 
 ### If you want to change the hotkey or earplug volume: 
 
