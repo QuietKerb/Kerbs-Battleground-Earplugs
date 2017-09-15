@@ -8,7 +8,7 @@ You need nircmd.exe in your windows directory:
   - [nircmd.exe](https://github.com/QuietKerb/Kerbs-Battleground-Earplugs/raw/master/deps/nircmd.exe)  
   - nircmd handles the volume changing
   
-A green H icon will show in the system tray while it's running, right click and exit to close.
+A black earplugs icon will show in the system tray while it's running, right click and exit to close.
   
 ## Press Insert to toggle earplugs in/out
 
