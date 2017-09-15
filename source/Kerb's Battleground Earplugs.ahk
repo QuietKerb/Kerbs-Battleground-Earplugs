@@ -5,9 +5,6 @@
 ; And you need autohotkey installed to run the script:
 ; https://www.autohotkey.com/download/ahk-install.exe
 
-; Right click the script and run with autohotkey if it doesn't by default
-; (Green H icon in system tray when running, right click it and exit to close)
-
 ; Press the hotkey (Insert by default) to toggle earplugs in/out
 
 ; OPTIONS ----------------------------------------------------------------------
