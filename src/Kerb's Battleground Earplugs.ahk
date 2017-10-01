@@ -30,9 +30,12 @@ CoordMode, Pixel, Relative
 
 ; Set earplug hotkey
 Hotkey, %HOTKEY%, toggleVolume
+Hotkey, ^%HOTKEY%, toggleVolume
+Hotkey, !%HOTKEY%, toggleVolume
+Hotkey, +%HOTKEY%, toggleVolume
 Return
 
-; Toggle volume
+; Toggle volume function
 toggleVolume:
 WinGet, pid, PID, PLAYERUNKNOWN'S BATTLEGROUNDS
 WinGetPos, X, Y, Width, Height, PLAYERUNKNOWN'S BATTLEGROUNDS
@@ -76,7 +79,6 @@ Loop
     PixelSearch, Px2, Py2, 0, 0, 10, 10, 0x000000, 0, Fast
     if (ErrorLevel){
       Tooltip, Connected!, ((Width / 2) - 48), (Height - (Height / 5))
-      connecting := False
       Sleep, 3000
       ToolTip
       Break
@@ -87,6 +89,5 @@ Loop
       Break
     }
 }
-
 keepConnecting := false
 Return
