@@ -51,7 +51,7 @@ if (normalVolume) {
 }
 Return
 
-; Auto reconnect - assigning hotkey like above didnt work for w/e reason...
+; Auto reconnect - hardcode as DEL for now
 #MaxThreadsPerHotkey 3
 Del::
 #MaxThreadsPerHotkey 1
@@ -66,22 +66,24 @@ Loop
 {
     Tooltip, Connecting..., ((Width / 2) - 48), (Height - (Height / 5))
 
-    PixelSearch, Px, Py, Width/2-10, Height/2-10, Width/2+10, Height/2+10, 0x005377, 3, Fast
-    if (!ErrorLevel){
-      Click %Px%, %Py%
-      try++
-      ToolTip, Try number %try%..., ((Width / 2) - 48), (Height - (Height / 5))
-      Sleep, 3000
-    }
-
-    Sleep, 100
-
+    ; Check for black at top left corner - ie. not connected
     PixelSearch, Px2, Py2, 0, 0, 10, 10, 0x000000, 0, Fast
     if (ErrorLevel){
       Tooltip, Connected!, ((Width / 2) - 48), (Height - (Height / 5))
       Sleep, 3000
       ToolTip
       Break
+    }
+
+    Sleep, 100
+
+    ; Check for yellow of reconnect button at center of screen
+    PixelSearch, Px, Py, Width/2-10, Height/2-10, Width/2+10, Height/2+10, 0x005377, 3, Fast
+    if (!ErrorLevel){
+      Click %Px%, %Py%
+      try++
+      ToolTip, Try number %try%..., ((Width / 2) - 48), (Height - (Height / 5))
+      Sleep, 3000
     }
 
     if (!keepConnecting){
