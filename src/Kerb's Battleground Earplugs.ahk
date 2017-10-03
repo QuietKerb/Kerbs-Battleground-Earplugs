@@ -49,7 +49,7 @@ toggleVolume:
 
   ; Get volume object
   if !(Volume := GetVolumeObject(pid)){
-    MsgBox, There was a problem retrieving the application volume interface
+    ToolTip, There was a problem retrieving the application volume interface
   }
 
   ; Toggle volume
@@ -66,7 +66,7 @@ Return
 
 ; Auto reconnect
 #MaxThreadsPerHotkey 3
-Del::
+Home::
   #MaxThreadsPerHotkey 1 WinGetPos, X, Y, Width, Height, PLAYERUNKNOWN'S BATTLEGROUNDS
   try = 0
   if (keepConnecting){
@@ -74,10 +74,9 @@ Del::
     Return
   }
   keepConnecting := true
+  Tooltip, Connecting..., ((Width / 2) - 48), (Height - (Height / 5))
   Loop
   {
-      Tooltip, Connecting..., ((Width / 2) - 48), (Height - (Height / 5))
-
       ; Check for black at top left corner - ie. not connected
       PixelSearch, Px2, Py2, 0, 0, 10, 10, 0x000000, 0, Fast
       if (ErrorLevel){
