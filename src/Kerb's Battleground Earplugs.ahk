@@ -39,14 +39,13 @@ toggleVolume:
   if WinExist ("PLAYERUNKNOWN'S BATTLEGROUNDS") {
     WinGet, pid, PID, PLAYERUNKNOWN'S BATTLEGROUNDS
     WinGetPos, X, Y, Width, Height, PLAYERUNKNOWN'S BATTLEGROUNDS
+  } else {
+    ; Check for Fortnite Window
+    if WinExist ("Fortnite"){
+      WinGet, pid, PID, Fortnite
+      WinGetPos, X, Y, Width, Height, Fortnite
+    }
   }
-
-  ; Check for Fortnite Window
-  if WinExist ("Fortnite"){
-    WinGet, pid, PID, Fortnite
-    WinGetPos, X, Y, Width, Height, Fortnite
-  }
-
   ; Get volume object
   if !(Volume := GetVolumeObject(pid)){
     ToolTip, There was a problem retrieving the application volume interface
