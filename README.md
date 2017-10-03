@@ -14,4 +14,4 @@ A black earplugs icon will show in the system tray, right click and exit to clos
   - You will need autohotkey installed to run/compile the script:  
     - [ahk-install.exe](https://www.autohotkey.com/download/ahk-install.exe)
 
-  - Clone the repo or download the src directory, instructions are in the script.
+  - Clone/download the repo or copy contents of src directory, instructions are in the script.
