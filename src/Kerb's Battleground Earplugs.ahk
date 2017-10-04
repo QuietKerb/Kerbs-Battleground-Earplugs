@@ -36,14 +36,19 @@ Return
 normalVolume := true
 toggleVolume:
   ; Check for Battlegrounds Window
-  if WinExist ("PLAYERUNKNOWN'S BATTLEGROUNDS") {
+  IfWinExist, PLAYERUNKNOWN'S BATTLEGROUNDS
+  {
     WinGet, pid, PID, PLAYERUNKNOWN'S BATTLEGROUNDS
     WinGetPos, X, Y, Width, Height, PLAYERUNKNOWN'S BATTLEGROUNDS
+    MsgBox, pubg found
   } else {
     ; Check for Fortnite Window
-    if WinExist ("Fortnite"){
+    IfWinExist, Fortnite
+    {
+      MsgBox, fortnite found
       WinGet, pid, PID, Fortnite
       WinGetPos, X, Y, Width, Height, Fortnite
+      Return
     }
   }
   ; Get volume object
