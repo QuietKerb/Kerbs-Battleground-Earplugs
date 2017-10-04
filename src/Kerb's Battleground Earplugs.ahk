@@ -40,12 +40,10 @@ toggleVolume:
   {
     WinGet, pid, PID, PLAYERUNKNOWN'S BATTLEGROUNDS
     WinGetPos, X, Y, Width, Height, PLAYERUNKNOWN'S BATTLEGROUNDS
-    MsgBox, pubg found
   } else {
     ; Check for Fortnite Window
     IfWinExist, Fortnite
     {
-      MsgBox, fortnite found
       WinGet, pid, PID, Fortnite
       WinGetPos, X, Y, Width, Height, Fortnite
       Return
