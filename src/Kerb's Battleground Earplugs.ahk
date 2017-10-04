@@ -46,7 +46,6 @@ toggleVolume:
     {
       WinGet, pid, PID, Fortnite
       WinGetPos, X, Y, Width, Height, Fortnite
-      Return
     }
   }
   ; Get volume object
